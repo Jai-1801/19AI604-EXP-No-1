@@ -1,9 +1,9 @@
 # Experiment 1 – Installation of Rust and Cargo Tool and Setting up Rust in VS Code Environment  
 
-<H3>ENTER YOUR NAME:</H3>  
-<H3>ENTER YOUR REGISTER NO:</H3>  
+<H3>ENTER YOUR NAME: Jai Surya R</H3>  
+<H3>ENTER YOUR REGISTER NO: 212223230084</H3>  
 <H3>EX.NO.1</H3>  
-<H3>DATE:</H3>  
+<H3>DATE: 16/10/2025</H3>  
 
 <H1 ALIGN =CENTER> Installation of Rust and Cargo Tool and Setting up Rust in VS Code Environment </H1>  
 
@@ -41,14 +41,46 @@ STEP 7: Install all the necessary Rust extensions in Visual Studio Code. <BR>
 STEP 8: Run a simple *Hello World* program to test if Rust works in VS Code. <BR>  
 
 ## PROGRAM:  
-```rust
+```use std::io;
+
 fn main() {
-    println!("Hello, Rust in VS Code!");
+    println!("Welcome to Rust Setup Test!");
+    println!("Let's do a simple calculation.");
+
+    println!("Enter your name:");
+    let mut name = String::new();
+    io::stdin()
+        .read_line(&mut name)
+        .expect("Failed to read input");
+
+    println!("Enter two numbers to add:");
+
+    let mut num1 = String::new();
+    io::stdin()
+        .read_line(&mut num1)
+        .expect("Failed to read number 1");
+
+    let mut num2 = String::new();
+    io::stdin()
+        .read_line(&mut num2)
+        .expect("Failed to read number 2");
+
+    let num1: i32 = num1.trim().parse().expect("Please enter a valid number");
+    let num2: i32 = num2.trim().parse().expect("Please enter a valid number");
+
+    let sum = num1 + num2;
+
+    println!("Hello, {}!", name.trim());
+    println!("The sum of {} and {} is: {}", num1, num2, sum);
+    println!("Rust environment is working perfectly in VS Code!");
 }
+
 ```
 
 ## OUTPUT:
+<img width="542" height="276" alt="image" src="https://github.com/user-attachments/assets/04b140ed-e48f-459b-bb5d-4325bd426d8c" />
+
 
 ## RESULT:
-
+The installation of Rust and Cargo tools was successfully completed, and the Rust environment was set up and tested in Visual Studio Code by executing a simple interactive program within a single fn main() function.
 
